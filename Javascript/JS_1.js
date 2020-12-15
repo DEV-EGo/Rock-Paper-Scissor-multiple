@@ -25,22 +25,42 @@
 
 // =================== P R A C T I C E ========================
 
-var LettersToChoose =
+// var LettersToChoose =
+// [
+//     "p",
+//     "r",
+//     "s"
+// ];
+
+// document.onkeyup = function ( event) 
+// {
+//     var UserPicked = event.key;
+
+//     var AIGuess = LettersToChoose[Math.floor(Math.random() * LettersToChoose.length)];
+
+//     if((UserPicked === 'r') || (UserPicked === "p") || (UserPicked === "s")){
+
+//         alert(" you chose:" + UserPicked);
+//         alert(" the computer chose:"  + AIGuess);
+//     }
+// }
+// =================== P R A C T I C E ========================
+
+var Pickthis = 
 [
     "p",
-    "r",
-    "s"
+    "s",
+    "r"
 ];
 
-document.onkeyup = function ( event) 
-{
-    var UserPicked = event.key;
-
-    var AIGuess = LettersToChoose[Math.floor(Math.random() * LettersToChoose.length)];
-
-    if((UserPicked === 'r') || (UserPicked === "p") || (UserPicked === "s")){
-
-        alert(" you chose:" + UserPicked);
-        alert(" the computer chose:"  + AIGuess);
+document.onkeyup = function ( event){
+    var ichose = event.key;
+    var C_Chose = Pickthis[Math.floor(Math.random() * Pickthis.length)];
+    if(
+        (ichose === "p") || (ichose === "r") || (ichose === "s")
+    )
+    {
+        alert(" User Pressed: " + ichose);
+        alert(" computer chose:" + C_Chose);
     }
 }
