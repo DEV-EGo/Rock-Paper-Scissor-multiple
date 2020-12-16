@@ -21,5 +21,15 @@ document.onkeyup = function ( event ) {
 
     // randomly choose a choice from the options array, this is the computer's guess.
 
+    var ComputerGuess = PickaWeapon[Math.floor(Math.random() * PickaWeapon.length)];
+
+    // this code block will run only if user presse "r","p","s"
+
+    if((GuessUser === "r") || (GuessUser === "p") || (GuessUser === "s")) {
+
+        // display the user and computer guess
     
-}
+        ChoiceofText.textContent = "you chose  " + GuessUser;
+        ComputerChoiceText.textContent = "the computer chose:" + ComputerGuess;
+    }
+};
