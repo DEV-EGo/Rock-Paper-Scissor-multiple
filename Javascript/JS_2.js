@@ -80,3 +80,17 @@ var TesterChoice = [
 
 var gamerOutput = document.getElementById("GameOutput");
 var ComputerOutput = document.getElementById("ComputerOutput");
+
+document.onkeyup = function(event) {
+
+    var TesterGuess = event.key;
+
+    var CPOutput = TesterChoice[Math.floor(Math.random() * TesterChoice.length)];
+
+    if(
+        (TesterGuess ==="t") || (TesterGuess === "f") || (TesterGuess === "g") || (TesterGuess === "h")
+    ){
+        gamerOutput.textContent = "Choice 1 : " + TesterGuess;
+        ComputerOutput.textContent = "Ai Chose :" + CPOutput;
+    }
+}
