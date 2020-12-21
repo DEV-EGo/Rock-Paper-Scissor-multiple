@@ -42,5 +42,8 @@ document.onkeyup = function(event) {
     ) {
         // hides directions on the HTML
         directionsText.textContent = "";
+
+        // displaying the user guesses-wins-losses-ties
+        
     }
 }
