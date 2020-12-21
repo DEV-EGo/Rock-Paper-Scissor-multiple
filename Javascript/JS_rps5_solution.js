@@ -21,3 +21,26 @@ var copmuterchoiceText = document.getElementById("computerchoice_text");
 var winsText= document.getElementById("wins_text");
 var lossesText = document.getElementById("losses_text");
 var tiesText = document.getElementById("ties_text");
+
+// function runs when ever the user touches a key 
+
+document.onkeyup = function(event) {
+
+    // determines what key was pressed
+
+    var userGuess = event.key;
+
+    // Randomly chooses a choice from the array of options. 
+    // T H I S IS THE COMPUTERS GUESS
+
+    var comptuerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    // the code below only runs once those specific keys are pressed
+
+    if (
+        (userGuess === "r") || (userGuess === "p") || (userGuess === "s")
+    ) {
+        // hides directions on the HTML
+        directionsText.textContent = "";
+    }
+}
