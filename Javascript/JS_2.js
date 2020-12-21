@@ -69,3 +69,14 @@ document.onkeyup = function(event) {
 
     }
 }
+
+// ============================= //
+var TesterChoice = [
+    "t",
+    "f",
+    "g",
+    "h"
+];
+
+var gamerOutput = document.getElementById("GameOutput");
+var ComputerOutput = document.getElementById("ComputerOutput");
