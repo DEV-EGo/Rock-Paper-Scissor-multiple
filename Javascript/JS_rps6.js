@@ -26,5 +26,31 @@ document.onkeyup = function (event) {
     var UGuess = event.key;
 
     // random chooses a choice from the option array. this is the computer guess
+
+    var CompGuess = ChoiceToChooseFrom[Math.floor(Math.random() * ChoiceToChooseFrom.length)];
+
+    // code will execute guess for each key r,p,s
+
+    if((UGuess==="r") || (UGuess === "p") || (UGuess === "s")){
     
+    //  if we choose Rock & AI guess  scissors , the win variable increases
+        if((UGuess === "r") && (CompGuess === "s")){
+            wins++;
+        }
+    
+    // if we choose rock & AI choose paper, losses will increase
+        if((UGuess === "r") && (CompGuess === "p")){
+            losses++;
+        }
+
+    // if we choose scissors & AI chose rock, losses increases
+    if((UGuess === "s") && (CompGuess === "r")){
+        losses++;
+    }
+
+    // if we choose scissors and AI chose rock, wins increase
+    if((UGuess ==="s") && (CompGuess === "r")){
+        wins++;
+    }
+    }
 }
