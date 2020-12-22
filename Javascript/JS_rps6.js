@@ -13,10 +13,10 @@ var ties = 0;
 // variables that will target the htmnl that will display info
 
 var TextForDirections = document.getElementById("Direction-text");
-var TextForChoice = document.getElementById("UserChoice");
+var TextForChoice = document.getElementById("UsersChoice");
 var TextForAiChoice = document.getElementById("ChoiceByComputer");
 var TextForWins = document.getElementById("RecordOfWins");
-var TextForLosses = document.getElementById("RecordOFLosses");
+var TextForLosses = document.getElementById("RecordOfLosses");
 var TextForTies = document.getElementById("RecordOfTies");
 
 // function will run whenever user presses a target key
@@ -52,5 +52,30 @@ document.onkeyup = function (event) {
     if((UGuess ==="s") && (CompGuess === "r")){
         wins++;
     }
+
+    // if we choose paper and AI chose rock, wins increases
+    if((UGuess === "p") && (CompGuess === "r")){
+        wins++;
     }
-}
+
+    // if we choose paper and trhe AI chose rock, losses increase
+    if((UGuess === "p") && (CompGuess === "r")){
+        losses++;
+    }
+
+    // if we chose the same choice as the computer , ties increases
+    if(UGuess === CompGuess) {
+        ties++
+    }
+
+    // hide the directions
+    TextForDirections.textContent = "";
+
+    // display the user and AI guess-wins-losses-ties
+    TextForChoice.textContent = " tester chose:" + UGuess;
+    TextForAiChoice.textContent = " AI chose:" + CompGuess;
+    TextForWins.textContent = " Wins :" + wins;
+    TextForLosses.textContent = "Lost :" + losses;
+    TextForTies.textContent = " Ties :" + ties;
+    }
+};
