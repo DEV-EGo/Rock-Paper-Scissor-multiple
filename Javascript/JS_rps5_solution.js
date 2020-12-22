@@ -1,3 +1,6 @@
+// This working file doest not include increment for wins-losses-ties
+// =================================
+
 // creating array of choices
 var computerChoices = [
     "r",
@@ -45,7 +48,7 @@ document.onkeyup = function(event) {
 
         // displaying the user guesses-wins-losses-ties
         userchoiceText.textContent = "you chose:" + userGuess;
-        computerChoices.textContent = " Ai chose :" + comptuerGuess;
+        computerchoiceText.textContent = " Ai chose :" + comptuerGuess;
         winsText.textContent = " win:" + wins;
         lossesText.textContent = " loss:" + losses;
         tiesText.textContent = " ties:" + ties;
