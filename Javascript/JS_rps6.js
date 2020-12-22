@@ -18,3 +18,13 @@ var TextForAiChoice = document.getElementById("ChoiceByComputer");
 var TextForWins = document.getElementById("RecordOfWins");
 var TextForLosses = document.getElementById("RecordOFLosses");
 var TextForTies = document.getElementById("RecordOfTies");
+
+// function will run whenever user presses a target key
+
+document.onkeyup = function (event) {
+    // determines what key was used
+    var UGuess = event.key;
+
+    // random chooses a choice from the option array. this is the computer guess
+    
+}
