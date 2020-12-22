@@ -17,7 +17,7 @@ var ties = 0;
 
 var directionsText = document.getElementById("directions_text");
 var userchoiceText = document.getElementById("userchoice_text");
-var copmuterchoiceText = document.getElementById("computerchoice_text");
+var computerchoiceText = document.getElementById("computerchoice_text");
 var winsText= document.getElementById("wins_text");
 var lossesText = document.getElementById("losses_text");
 var tiesText = document.getElementById("ties_text");
@@ -44,6 +44,11 @@ document.onkeyup = function(event) {
         directionsText.textContent = "";
 
         // displaying the user guesses-wins-losses-ties
-        
+        userchoiceText.textContent = "you chose:" + userGuess;
+        computerChoices.textContent = " Ai chose :" + comptuerGuess;
+        winsText.textContent = " win:" + wins;
+        lossesText.textContent = " loss:" + losses;
+        tiesText.textContent = " ties:" + ties;
+
     }
-}
+};
