@@ -1,5 +1,6 @@
 // array storing variables
-var PickFromThis = [
+var PickFromThis = 
+[
     "r",
     "p",
     "s"
@@ -14,7 +15,7 @@ var ties = 0;
 var TargetDirections = document.getElementById("Directions");
 var TargetPlayersChoice = document.getElementById("Players_Choice");
 var TargetAIChoice = document.getElementById("Comp_Choice");
-var TargetWins = document.getElementById("Wins");
+var TargetWins = document.getElementById("Win");
 var TargetLosses = document.getElementById("Losses");
 var TargetTies = document.getElementById("Ties");
 
@@ -25,18 +26,20 @@ document.onkeyup - function (event) {
     var UserGuess = event.key;
 
     // Randomizing a choice from the array option
-    var CompGuess = PickFromThis[Math.floor(Math.random() * PickFromThis)];
+    var CompGuess = PickFromThis[Math.floor(Math.random() * PickFromThis.length)];
 
     // if else statement 
     if((UserGuess === "r") || (UserGuess === "p") || (UserGuess === "s")){
         
-        if ((UserGuess === "r" && CompGuess === "s") || 
-        (UserGuess === "s" && CompGuess === "p") ||
-        (UserGuess === "p" && CompGuess === "r")) {
+        if (
+            (UserGuess === "r" && CompGuess === "s") || 
+            (UserGuess === "s" && CompGuess === "p") ||
+            (UserGuess === "p" && CompGuess === "r")
+            ) {
             wins++;
         } else if (UserGuess === CompGuess) {
             ties++;
-        }else{
+        } else {
             losses++;
         }
 
@@ -47,8 +50,8 @@ document.onkeyup - function (event) {
 
         TargetPlayersChoice.textContent = "you chose" + UserGuess;
         TargetAIChoice.textContent = " computer chose" + CompGuess;
-        TargetWins.textContent = " wins:" + wins;
-        TargetLosses.textContent = " losses:" + losses;
+        TargetWins.textContent = " Win:" + wins;
+        TargetLosses.textContent = " Losses:" + losses;
         TargetTies.textContent = " Ties:" + ties;
     }
 };
