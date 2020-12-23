@@ -12,8 +12,8 @@ var ties = 0;
 
 // variables targeting the point of reference in the html
 var TargetDirections = document.getElementById("Directions");
-var TargetPlayersChoice = document.getElementById("PlayersChoice");
-var TargetAIChoice = document.getElementById("CompChoice");
+var TargetPlayersChoice = document.getElementById("Players_Choice");
+var TargetAIChoice = document.getElementById("Comp_Choice");
 var TargetWins = document.getElementById("Wins");
 var TargetLosses = document.getElementById("Losses");
 var TargetTies = document.getElementById("Ties");
@@ -29,6 +29,7 @@ document.onkeyup - function (event) {
 
     // if else statement 
     if((UserGuess === "r") || (UserGuess === "p") || (UserGuess === "s")){
+        
         if ((UserGuess === "r" && CompGuess === "s") || 
         (UserGuess === "s" && CompGuess === "p") ||
         (UserGuess === "p" && CompGuess === "r")) {
@@ -40,14 +41,14 @@ document.onkeyup - function (event) {
         }
 
         // hide the directions
-        TargetDirections.textContent ="";
+        TargetDirections.textContent = "";
 
         // displaying the user and computer stats
 
         TargetPlayersChoice.textContent = "you chose" + UserGuess;
         TargetAIChoice.textContent = " computer chose" + CompGuess;
-        TargetWins.textContent = " wins:" +wins;
+        TargetWins.textContent = " wins:" + wins;
         TargetLosses.textContent = " losses:" + losses;
         TargetTies.textContent = " Ties:" + ties;
     }
-}
+};
